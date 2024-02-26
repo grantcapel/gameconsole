@@ -5,9 +5,8 @@
 #ifndef GAMECONSOLE_CHESSPIECES_H
 #define GAMECONSOLE_CHESSPIECES_H
 
-enum Side {
-    black, white
-};
+#include "globalChess.h"
+#include "chessBoard.h"
 
 
 //generic parent class piece
@@ -24,7 +23,7 @@ public:
     //methods
     std::string GetIdentifier();
     virtual bool MakeMove(int srcRow, int srcCol, int destRow, int destCol, Piece* board[8][8]);
-    virtual std::vector<Coordinate> AllLegalMoves(int currentRow, int currentCol, Piece* board[8][8])
+    virtual std::vector<Coordinate> AllLegalMoves(int currentRow, int currentCol, Piece* board[8][8]);
 
 private:
 
@@ -52,7 +51,7 @@ public:
 
    //methods
    bool MakeMove(int srcRow, int srcCol, int destRow, int destCol, Piece* board[8][8]);
-   std::vector<Coordinate> AllLegalMoves(int currentRow, int currentCol, Piece* board[8][8])
+   std::vector<Coordinate> AllLegalMoves(int currentRow, int currentCol, Piece* board[8][8]);
 
 private:
 
@@ -95,7 +94,7 @@ public:
    //methods
    std::vector<Coordinate> AllLegalMoves(int currentRow, int currentCol, Piece* board[8][8]);
 
-private;
+private:
 
 };
 
@@ -122,7 +121,7 @@ public:
 
     //methods
     std::vector<Coordinate> AllLegalMoves(int currentRow, int currentCol, Piece* board[8][8]);
-    bool CheckDanger(int row, int col, Piece* board[8][8])
+    bool CheckDanger(int row, int col, Piece* board[8][8]);
 
 private:
 
