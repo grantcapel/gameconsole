@@ -8,25 +8,6 @@
 #include "globalChess.h"
 #include "chessPieces.h"
 
-class Coordinate{
-public:
-    //vars
-    int row;
-    int col;
-
-
-    //init
-    Coordinate(int row, int col){
-        this->row = row;
-        this->col = col;
-    }
-
-    //overloaded
-    bool operator==(const Coordinate& other) const;
-
-private:
-
-};
 
 
 class Board {
@@ -36,8 +17,10 @@ public:
 
     //init
     Board() {
-        for (int j = 0; j < 8; j++) {
-            pieces[i][j] = NULL;
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                pieces[i][j] = NULL;
+            }
         }
         //Board Setup:
 

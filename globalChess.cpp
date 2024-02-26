@@ -3,3 +3,7 @@
 //
 
 #include "globalChess.h"
+
+bool Coordinate::operator==(const Coordinate &other) const {
+return (row == other.row && col == other.col);
+}

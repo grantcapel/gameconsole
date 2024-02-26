@@ -4,7 +4,7 @@
 
 #ifndef GAMECONSOLE_PROGRAMCONTROL_H
 #define GAMECONSOLE_PROGRAMCONTROL_H
-
+#include "chessBoard.h"
 
 class programControl {
 public:

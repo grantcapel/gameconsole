@@ -8,7 +8,6 @@
 #include "globalChess.h"
 #include "chessBoard.h"
 
-
 //generic parent class piece
 class Piece{
 public:
@@ -18,6 +17,7 @@ public:
     }
 
     //vars
+    Side side;
     char id = 'N';
 
     //methods

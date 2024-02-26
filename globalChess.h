@@ -15,6 +15,25 @@ enum Side{
 };
 
 
+class Coordinate{
+public:
+//vars
+int row;
+int col;
+
+
+//init
+Coordinate(int row, int col){
+this->row = row;
+this->col = col;
+}
+
+//overloaded
+bool operator==(const Coordinate& other) const;
+
+private:
+
+};
 
 
 
