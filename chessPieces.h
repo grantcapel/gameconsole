@@ -6,7 +6,7 @@
 #define GAMECONSOLE_CHESSPIECES_H
 
 #include "globalChess.h"
-#include "chessBoard.h"
+
 
 //generic parent class piece
 class Piece{
@@ -121,6 +121,7 @@ public:
 
     //methods
     std::vector<Coordinate> AllLegalMoves(int currentRow, int currentCol, Piece* board[8][8]);
+
     bool CheckDanger(int row, int col, Piece* board[8][8]);
 
 private:

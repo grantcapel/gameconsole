@@ -7,7 +7,7 @@
 
 
 // piece class
-virtual bool Piece::MakeMove(int srcRow, int srcCol, int destRow, int destCol, Piece *(*board)[8]) {
+ bool Piece::MakeMove(int srcRow, int srcCol, int destRow, int destCol, Piece *(*board)[8]) {
     std::vector<Coordinate> moves = AllLegalMoves(srcRow, srcCol, board);
     if (std::find(moves.begin(), moves.end(), Coordinate(destRow, destCol)) != moves.end()) {
         return true;
@@ -15,7 +15,7 @@ virtual bool Piece::MakeMove(int srcRow, int srcCol, int destRow, int destCol, P
     return false;
 }
 
-virtual std::vector<Coordinate> Piece::AllLegalMoves(int currentRow, int currentCol, Piece *(*board)[8]) {
+std::vector<Coordinate> Piece::AllLegalMoves(int currentRow, int currentCol, Piece *(*board)[8]) {
     return std::vector<Coordinate>();
 }
 
@@ -32,7 +32,7 @@ bool Pawn::MakeMove(int srcRow, int srcCol, int destRow, int destCol, Piece *(*b
     return false;
 }
 
-std::vector <Coordinates> Pawn::AllLegalMoves(int currentRow, int currentCol, Piece *(*board)[8]) {
+std::vector <Coordinate> Pawn::AllLegalMoves(int currentRow, int currentCol, Piece *(*board)[8]) {
     std::vector<Coordinate> moves;
 
     if (board[currentRow + direction][currentCol] == NULL) {
@@ -58,7 +58,7 @@ std::vector <Coordinates> Pawn::AllLegalMoves(int currentRow, int currentCol, Pi
 
 
 //rook class
-std::vector <Coordinates> Rook::AllLegalMoves(int currentRow, int currentCol, Piece *(*board)[8]) {
+std::vector <Coordinate> Rook::AllLegalMoves(int currentRow, int currentCol, Piece *(*board)[8]) {
     std::vector<Coordinate> moves;
 
     //Check up
@@ -127,7 +127,7 @@ std::vector <Coordinates> Rook::AllLegalMoves(int currentRow, int currentCol, Pi
 
 
 //knight class
-std::vector<Coordinates> Knight::AllLegalMoves(int currentRow, int currentCol, Piece *(*board)[8]) {
+std::vector<Coordinate> Knight::AllLegalMoves(int currentRow, int currentCol, Piece *(*board)[8]) {
     std::vector<Coordinate> moves;
 
     int X[8] = {1, 1, -1, -1, 2, 2, -2, -2};
@@ -150,7 +150,7 @@ std::vector<Coordinates> Knight::AllLegalMoves(int currentRow, int currentCol, P
 
 
 //bishop class
-std::vector<Coordinates> Bishop::AllLegalMoves(int currentRow, int currentCol, Piece *(*board)[8]) {
+std::vector<Coordinate> Bishop::AllLegalMoves(int currentRow, int currentCol, Piece *(*board)[8]) {
     std::vector<Coordinate> moves;
 
     //checks in all four diagonal directions

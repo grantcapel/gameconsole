@@ -9,7 +9,8 @@
 
 
 
-void PrintBoard(std::vector<Coordinate> possibleMoves = std::vector<Coordinate>()) {
+
+void Board::PrintBoard(std::vector<Coordinate> possibleMoves){
     for (int y = 7; y >=0; y--) {
 
         std::cout << "---";
