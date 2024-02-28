@@ -7,6 +7,20 @@
 
 
 // piece class
+
+std::string Piece::GetIdentifier() {
+    char sideChar;
+    if (side == Side::black) {
+        sideChar = 'B';
+    }
+    else {
+        sideChar = 'W';
+    }
+
+    return std::string(1, sideChar) + id;
+}
+
+
  bool Piece::MakeMove(int srcRow, int srcCol, int destRow, int destCol, Piece *(*board)[8]) {
     std::vector<Coordinate> moves = AllLegalMoves(srcRow, srcCol, board);
     if (std::find(moves.begin(), moves.end(), Coordinate(destRow, destCol)) != moves.end()) {
