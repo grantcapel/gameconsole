@@ -9,6 +9,7 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
+#include <string.h>
 
 enum Side{
     black, white
